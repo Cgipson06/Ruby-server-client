@@ -8,7 +8,7 @@ loop  {
     client = server.accept
     puts "Connection established, listening to port 80..."
     action = ""
-    while line = client.gets   # Thanks Tommy Noe for the blog post about this gets loop method
+    while line = client.gets   # Thanks johnwquarles for the blog post about this gets loop method
       action += line
       break if action =~ /\r\n\r\n$/ #The while will terminate with the end of the get request, but the post needs this to break out the header to get the message size
     end 
