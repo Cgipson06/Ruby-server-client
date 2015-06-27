@@ -7,5 +7,4 @@ s = TCPSocket.open(hostname, port)
 while line = s.gets
   puts line.chop
 end
-whil
 s.close
